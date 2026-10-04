@@ -127,7 +127,19 @@ build/main.o: main.cpp \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainter.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextoption.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QImage \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qapplication.h:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h:
@@ -258,3 +270,15 @@ UI/MainSimulationWindow.hpp:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h:
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsview.h:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qpainter.h:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qtextoption.h:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/QImage:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h:

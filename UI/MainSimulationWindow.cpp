@@ -1,4 +1,5 @@
 #include "MainSimulationWindow.hpp"
+#include "Objects/ParentOfObjects.hpp"
 
 #include <QAction>
 #include <QDockWidget>
@@ -9,7 +10,10 @@
 #include <QPushButton>
 #include <QStatusBar>
 #include <QToolBar>
+#include <QGridLayout>
 #include <QVBoxLayout>
+#include <QGraphicsView>
+#include <QImage>
 
 MainSimulationWindow::MainSimulationWindow(QWidget *parent) : QMainWindow(parent) {
     setWindowTitle("Grid Simulator");
@@ -17,12 +21,17 @@ MainSimulationWindow::MainSimulationWindow(QWidget *parent) : QMainWindow(parent
 
     // ---- central widget: a container with a layout ----
     auto *central = new QWidget;
-    auto *layout  = new QVBoxLayout(central);
+    auto *layout  = new QGridLayout(central);
     info_label = new QLabel("Nothing selected");
     auto *button  = new QPushButton("Open second window");
-    layout->addWidget(info_label, 1);   // the 1 = stretch: label takes extra space
-    layout->addWidget(button);
+    layout->addWidget(info_label, 0, 0);
+    layout->addWidget(button, 5, 0);
     setCentralWidget(central);
+
+    // create the graphics window
+    view_scene = new QGraphicsScene(this);
+    view_cam = new QGraphicsView(view_scene);
+    layout->addWidget(view_cam, 1, 0, 4, 6);
 
     // ---- actions: one object, reusable in menus AND toolbars ----
     auto *quit = new QAction("&Quit", this);
@@ -65,4 +74,16 @@ void MainSimulationWindow::open_second_window() {
     l->addWidget(new QLabel("I'm a separate window"));
     w->resize(300, 200);
     w->show();
+}
+
+void MainSimulationWindow::create_scene(int rows, int cols) {
+    scene_instantiated = true;
+    int far_left = -(cols * SQUARE_LEN)/2
+    int far_up = -(rows * SQUARE_LEN)/2
+    int width = 
+    for (int y = 0; y < rows; y++) {
+
+    }
+    for (int x = 0; x < cols; x++) {  
+    }
 }

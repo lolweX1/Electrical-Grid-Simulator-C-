@@ -114,6 +114,19 @@ build/UI/MainSimulationWindow.o: UI/MainSimulationWindow.cpp \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontiguouscache.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainter.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextoption.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QImage \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h \
+ Objects/ParentOfObjects.hpp \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QAction \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qaction.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QDockWidget \
@@ -122,7 +135,6 @@ build/UI/MainSimulationWindow.o: UI/MainSimulationWindow.cpp \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistview.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemview.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractitemmodel.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qitemselectionmodel.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemdelegate.h \
@@ -150,12 +162,14 @@ build/UI/MainSimulationWindow.o: UI/MainSimulationWindow.cpp \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstatusbar.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QToolBar \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtoolbar.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGridLayout \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h
 UI/MainSimulationWindow.hpp:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h:
@@ -271,6 +285,19 @@ UI/MainSimulationWindow.hpp:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontiguouscache.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsview.h:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qpainter.h:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qtextoption.h:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/QImage:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h:
+Objects/ParentOfObjects.hpp:
 /usr/include/x86_64-linux-gnu/qt6/QtGui/QAction:
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qaction.h:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QDockWidget:
@@ -279,7 +306,6 @@ UI/MainSimulationWindow.hpp:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistwidget.h:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistview.h:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemview.h:
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractitemmodel.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qitemselectionmodel.h:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemdelegate.h:
@@ -307,9 +333,11 @@ UI/MainSimulationWindow.hpp:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstatusbar.h:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QToolBar:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtoolbar.h:
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout:
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGridLayout:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h:
