@@ -79,8 +79,7 @@ bool ParentOfObjects::registerUid(const QString& value, bool allowRegistered)
 
 void ParentOfObjects::setConnectionHeightMeters(double value)
 {
-    connectionHeight = objectKind == ObjectKind::GroundWireConnection
-        ? 0.0 : std::max(0.0, value);
+    connectionHeight = std::max(0.0, value);
 }
 
 PortSide ParentOfObjects::terminalSide(int) const

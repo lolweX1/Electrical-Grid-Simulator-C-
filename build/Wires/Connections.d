@@ -74,7 +74,6 @@ build/Wires/Connections.o: Wires/Connections.cpp Wires/Connections.hpp \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qhash.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmath.h \
  Wires/../Objects/House.hpp Wires/../Objects/ParentOfObjects.hpp \
- Wires/../Objects/GroundWireConnection.hpp \
  Wires/../Objects/PowerGenerator.hpp Wires/../Objects/UtilityPole.hpp \
  Wires/../Objects/WireSeparator.hpp
 Wires/Connections.hpp:
@@ -155,7 +154,6 @@ Wires/../Objects/ParentOfObjects.hpp:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qmath.h:
 Wires/../Objects/House.hpp:
 Wires/../Objects/ParentOfObjects.hpp:
-Wires/../Objects/GroundWireConnection.hpp:
 Wires/../Objects/PowerGenerator.hpp:
 Wires/../Objects/UtilityPole.hpp:
 Wires/../Objects/WireSeparator.hpp:

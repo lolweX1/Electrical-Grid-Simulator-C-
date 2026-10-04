@@ -115,9 +115,9 @@ build/UI/MainSimulationWindow.o: UI/MainSimulationWindow.cpp \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
  UI/../Objects/Apartment.hpp UI/../Objects/House.hpp \
- UI/../Objects/ParentOfObjects.hpp UI/../Objects/GroundWireConnection.hpp \
- UI/../Objects/House.hpp UI/../Objects/PowerGenerator.hpp \
- UI/../Objects/UtilityPole.hpp UI/../Objects/WireSeparator.hpp \
+ UI/../Objects/ParentOfObjects.hpp UI/../Objects/House.hpp \
+ UI/../Objects/PowerGenerator.hpp UI/../Objects/UtilityPole.hpp \
+ UI/../Objects/WireSeparator.hpp \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QAction \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qaction.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
@@ -404,7 +404,6 @@ UI/../Wires/../Objects/ParentOfObjects.hpp:
 UI/../Objects/Apartment.hpp:
 UI/../Objects/House.hpp:
 UI/../Objects/ParentOfObjects.hpp:
-UI/../Objects/GroundWireConnection.hpp:
 UI/../Objects/House.hpp:
 UI/../Objects/PowerGenerator.hpp:
 UI/../Objects/UtilityPole.hpp:

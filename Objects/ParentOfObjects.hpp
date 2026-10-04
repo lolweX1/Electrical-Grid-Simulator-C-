@@ -9,7 +9,6 @@ enum class ObjectKind {
     House,
     Apartment,
     UtilityPole,
-    GroundWireConnection,
     WireSeparator,
     PowerGenerator
 };

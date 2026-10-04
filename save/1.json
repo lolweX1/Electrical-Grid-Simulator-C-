@@ -1,0 +1,153 @@
+{
+    "formatVersion": 1,
+    "objects": [
+        {
+            "connectionHeightMeters": 8,
+            "currentLimit": 40,
+            "id": 1,
+            "outputVoltage": 800,
+            "rotation": 0,
+            "type": "generator",
+            "uid": "WjwIf3MH",
+            "x": -2,
+            "y": 0
+        },
+        {
+            "connectionHeightMeters": 10,
+            "id": 2,
+            "ratedVoltage": 480,
+            "requiredCurrent": 10,
+            "rotation": 0,
+            "type": "house",
+            "uid": "IKs1s7JB",
+            "x": -3,
+            "y": -6
+        },
+        {
+            "connectionHeightMeters": 25,
+            "id": 3,
+            "ratedVoltage": 600,
+            "requiredCurrent": 20,
+            "rotation": 0,
+            "type": "apartment",
+            "uid": "ZX0AVeDr",
+            "x": 6,
+            "y": 0
+        },
+        {
+            "closed": true,
+            "connectionHeightMeters": 8,
+            "id": 6,
+            "rotation": 0,
+            "type": "separator",
+            "uid": "p8xwtZHY",
+            "x": -5,
+            "y": -1
+        },
+        {
+            "connectionHeightMeters": 10,
+            "id": 7,
+            "ratedVoltage": 480,
+            "requiredCurrent": 10,
+            "rotation": 0,
+            "type": "house",
+            "uid": "bmhlFFoZ",
+            "x": -5,
+            "y": 18
+        }
+    ],
+    "speedMultiplier": 100,
+    "wires": [
+        {
+            "fromObject": 1,
+            "fromTerminal": 0,
+            "id": 4,
+            "lengthMeters": 25.495097567963924,
+            "material": 1,
+            "resistivity": 2.82e-08,
+            "shortCircuit": false,
+            "temperature": 20,
+            "toObject": 6,
+            "toTerminal": 0,
+            "uid": "YhRlF5fa"
+        },
+        {
+            "fromObject": 6,
+            "fromTerminal": 2,
+            "id": 5,
+            "lengthMeters": 33.54101966249685,
+            "material": 1,
+            "resistivity": 2.82e-08,
+            "shortCircuit": false,
+            "temperature": 20,
+            "toObject": 2,
+            "toTerminal": 0,
+            "uid": "sBxNiHns"
+        },
+        {
+            "fromObject": 2,
+            "fromTerminal": 1,
+            "id": 6,
+            "lengthMeters": 54.083269131959845,
+            "material": 1,
+            "resistivity": 2.82e-08,
+            "shortCircuit": false,
+            "temperature": 20,
+            "toObject": 1,
+            "toTerminal": 4,
+            "uid": "9Tg96s1r"
+        },
+        {
+            "fromObject": 6,
+            "fromTerminal": 3,
+            "id": 7,
+            "lengthMeters": 114.12712210513327,
+            "material": 1,
+            "resistivity": 2.82e-08,
+            "shortCircuit": false,
+            "temperature": 20,
+            "toObject": 3,
+            "toTerminal": 0,
+            "uid": "uWRi1ua1"
+        },
+        {
+            "fromObject": 3,
+            "fromTerminal": 1,
+            "id": 8,
+            "lengthMeters": 144.30869689661813,
+            "material": 1,
+            "resistivity": 2.82e-08,
+            "shortCircuit": false,
+            "temperature": 20,
+            "toObject": 1,
+            "toTerminal": 5,
+            "uid": "89yJ1BDW"
+        },
+        {
+            "fromObject": 1,
+            "fromTerminal": 3,
+            "id": 9,
+            "lengthMeters": 167.7050983124842,
+            "material": 1,
+            "resistivity": 2.82e-08,
+            "shortCircuit": false,
+            "temperature": 20,
+            "toObject": 7,
+            "toTerminal": 0,
+            "uid": "7yWQLwvb"
+        },
+        {
+            "fromObject": 7,
+            "fromTerminal": 1,
+            "id": 10,
+            "lengthMeters": 165.30275254816542,
+            "material": 1,
+            "resistivity": 2.82e-08,
+            "shortCircuit": false,
+            "temperature": 20,
+            "toObject": 1,
+            "toTerminal": 7,
+            "uid": "dixUQ04U"
+        }
+    ]
+}

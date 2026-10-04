@@ -10,7 +10,6 @@ SRC += Objects/ParentOfObjects.cpp
 SRC += Objects/House.cpp
 SRC += Objects/Apartment.cpp
 SRC += Objects/UtilityPole.cpp
-SRC += Objects/GroundWireConnection.cpp
 SRC += Objects/WireSeparator.cpp
 SRC += Objects/PowerGenerator.cpp
 SRC += Wires/Wire.cpp

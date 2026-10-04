@@ -38,8 +38,6 @@ public:
     double toHeightMeters() const { return secondHeightMeters; }
     double minimumHeightMeters() const;
     void setEndpointHeights(double fromHeightMeters, double toHeightMeters);
-    bool isGroundWire() const { return groundWire; }
-    void setGroundWire(bool value) { groundWire = value; }
     double get_resistivity() const;
     double baseResistivity() const;
     double density() const;
@@ -53,12 +51,11 @@ public:
     bool isOverloaded() const { return std::abs(wireCurrent) > ampacity; }
     bool isOverheated() const
     {
-        return wireTemperature >= 90.0 ||
-               (!groundWire && sagRatio() > 0.08);
+        return wireTemperature >= 90.0 || sagRatio() > 0.08;
     }
     bool isLowClearance() const
     {
-        return !groundWire && minimumHeightMeters() < 5.0;
+        return minimumHeightMeters() < 5.0;
     }
     bool isRed() const
     {
@@ -98,7 +95,6 @@ private:
     double firstHeightMeters = 5.0;
     double secondHeightMeters = 5.0;
     bool shortCircuit;
-    bool groundWire = false;
 };
 
 #endif

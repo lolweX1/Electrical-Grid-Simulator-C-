@@ -1,7 +1,6 @@
 #include "MainSimulationWindow.hpp"
 
 #include "../Objects/Apartment.hpp"
-#include "../Objects/GroundWireConnection.hpp"
 #include "../Objects/House.hpp"
 #include "../Objects/PowerGenerator.hpp"
 #include "../Objects/UtilityPole.hpp"
@@ -69,8 +68,7 @@ QPointF terminalScenePosition(const ParentOfObjects& object, int terminal,
 {
     const QPointF center((object.x() + object.width() / 2.0) * gridSize,
                          (object.y() + object.height() / 2.0) * gridSize);
-    if (object.kind() == ObjectKind::UtilityPole ||
-        object.kind() == ObjectKind::GroundWireConnection) {
+    if (object.kind() == ObjectKind::UtilityPole) {
         return center;
     }
     if (object.kind() == ObjectKind::PowerGenerator) {
@@ -186,7 +184,6 @@ protected:
             painter.drawText(plot, Qt::AlignCenter, "Select a wire to view height");
             return;
         }
-
         const double maximumHeight =
             std::max(wire->fromHeightMeters(), wire->toHeightMeters());
         const double heightScale = maximumHeight > 0.0 ? maximumHeight : 1.0;
@@ -247,8 +244,6 @@ QString objectKindKey(ObjectKind kind)
         return "apartment";
     case ObjectKind::UtilityPole:
         return "pole";
-    case ObjectKind::GroundWireConnection:
-        return "ground";
     case ObjectKind::WireSeparator:
         return "separator";
     case ObjectKind::PowerGenerator:
@@ -519,7 +514,6 @@ MainSimulationWindow::MainSimulationWindow(QWidget* parent)
     addTool("House", "house");
     addTool("Apartment", "apartment");
     addTool("Utility pole", "pole");
-    addTool("Ground wire connection", "ground");
     addTool("Wire separator", "separator");
     addTool("Power generator", "generator");
     addTool("Connect wires", "wire");
@@ -862,7 +856,7 @@ MainSimulationWindow::MainSimulationWindow(QWidget* parent)
         }
 
         const int firstId = pendingWireSourceId;
-        const int firstTerminal = pendingWireSourceTerminal;
+        int firstTerminal = pendingWireSourceTerminal;
         pendingWireSourceId = -1;
         pendingWireSourceTerminal = -1;
         if (ghostWireItem) {
@@ -904,9 +898,7 @@ MainSimulationWindow::MainSimulationWindow(QWidget* parent)
         runSimulation();
         statusBar()->showMessage(
             shortCircuit ? "Generator terminals shorted (wire shown in red)." :
-            connections.wires().back()->isGroundWire()
-                ? "Ground wire connected to the ground reference."
-                : "Wire connected.",
+                           "Wire connected.",
             5000);
     };
 
@@ -998,7 +990,6 @@ void MainSimulationWindow::selectTool(const QString& tool)
     const QString toolName = tool == "house" ? "house" :
         tool == "apartment" ? "apartment" :
         tool == "pole" ? "utility pole" :
-    tool == "ground" ? "ground wire connection" :
     tool == "separator" ? "wire separator" : "power generator";
     statusBar()->showMessage("Click an empty grid area to place a " + toolName + ".");
 }
@@ -1014,9 +1005,6 @@ std::unique_ptr<ParentOfObjects> MainSimulationWindow::createObject(
     }
     if (tool == "pole") {
         return std::make_unique<UtilityPole>(id, gridX, gridY);
-    }
-    if (tool == "ground") {
-        return std::make_unique<GroundWireConnection>(id, gridX, gridY);
     }
     if (tool == "separator") {
         return std::make_unique<WireSeparator>(id, gridX, gridY);
@@ -1342,16 +1330,12 @@ void MainSimulationWindow::refreshObjectGraphics()
             marker->setPos(terminalScenePosition(object, terminal, gridSize));
             marker->setData(0, object.id());
             marker->setData(1, terminal);
+            marker->setZValue(25.0);
             QColor terminalColor;
             QString terminalName;
             if (object.terminalCount() == 1) {
-                if (object.kind() == ObjectKind::GroundWireConnection) {
-                    terminalColor = QColor(109, 76, 161);
-                    terminalName = "Ground wire terminal";
-                } else {
-                    terminalColor = QColor(235, 145, 35);
-                    terminalName = "Junction terminal";
-                }
+                terminalColor = QColor(235, 145, 35);
+                terminalName = "Junction terminal";
             } else if (object.kind() == ObjectKind::WireSeparator) {
                 terminalColor = terminal == 0 ? QColor(35, 155, 75) :
                                                 QColor(45, 105, 220);
@@ -1432,24 +1416,19 @@ void MainSimulationWindow::refreshWireGraphics()
         const QPointF end =
             terminalScenePosition(*to, wire.toTerminal(), gridSize);
         QPainterPath path(start);
-        if (wire.isGroundWire()) {
-            path.lineTo(end);
-        } else {
-            const QPointF delta = end - start;
-            const double sag = std::max(5.0, std::hypot(delta.x(), delta.y()) *
-                                                wire.sagRatio());
-            path.cubicTo(start + delta / 3.0 + QPointF(0.0, sag),
-                         start + delta * (2.0 / 3.0) + QPointF(0.0, sag),
-                         end);
-        }
+        const QPointF delta = end - start;
+        const double sag = std::max(5.0, std::hypot(delta.x(), delta.y()) *
+                                            wire.sagRatio());
+        path.cubicTo(start + delta / 3.0 + QPointF(0.0, sag),
+                     start + delta * (2.0 / 3.0) + QPointF(0.0, sag),
+                     end);
         QGraphicsPathItem* item = wireItems[index];
         item->setPath(path);
         item->setData(0, wire.id());
         item->setData(1, -1);
         item->setData(2, "wire");
-        item->setZValue(wire.isGroundWire() ? 26.0 : 20.0);
+        item->setZValue(20.0);
         const QColor wireColor = wire.isRed() ? QColor(220, 35, 35) :
-            wire.isGroundWire() ? QColor(109, 76, 161) :
             wire.id() == selectedWireId ? QColor(25, 125, 220) :
                                           QColor(75, 91, 105);
         item->setPen(QPen(wireColor, wire.id() == selectedWireId ? 6.0 : 4.0,
@@ -1457,15 +1436,16 @@ void MainSimulationWindow::refreshWireGraphics()
         item->setToolTip(QString("Current: %1 A\nVoltage drop: %2 V\n"
                                  "Resistance: %3 ohm\nTemperature: %4 C\n"
                                  "Temperature change: %5 C\nLength: %6 m\n"
-                                 "Sag: %7 m\nMinimum height: %8 m")
+                                 "%7")
                              .arg(std::abs(wire.current()), 0, 'f', 2)
                              .arg(std::abs(wire.voltageDrop()), 0, 'f', 2)
                              .arg(wire.resistance(), 0, 'f', 4)
                              .arg(wire.temperature(), 0, 'f', 1)
                              .arg(wire.temperatureChange(), 0, 'f', 3)
                              .arg(wire.expandedLength(), 0, 'f', 2)
-                             .arg(wire.sagMeters(), 0, 'f', 2)
-                             .arg(wire.minimumHeightMeters(), 0, 'f', 2));
+                             .arg(QString("Sag: %1 m\nMinimum height: %2 m")
+                                      .arg(wire.sagMeters(), 0, 'f', 2)
+                                      .arg(wire.minimumHeightMeters(), 0, 'f', 2)));
     }
 }
 
@@ -1522,7 +1502,7 @@ void MainSimulationWindow::refreshInspector()
         wireReadout->setText(
             QString("Voltage drop: %1 V\nCurrent: %2 A\nResistance: %3 ohm\n"
                     "Temperature: %4 C\nChange in temperature: %5 C\n"
-                    "Sag: %6 m\nMinimum height above ground: %7 m%8\n"
+                    "%6\n"
                     "Length: %9 m (base %10 m)\nMass: %11 kg\n"
                     "Thermal expansion: %12 um/(m C)")
                 .arg(std::abs(selectedWire->voltageDrop()), 0, 'f', 3)
@@ -1530,11 +1510,12 @@ void MainSimulationWindow::refreshInspector()
                 .arg(selectedWire->resistance(), 0, 'g', 5)
                 .arg(selectedWire->temperature(), 0, 'f', 1)
                 .arg(selectedWire->temperatureChange(), 0, 'f', 3)
-                .arg(selectedWire->sagMeters(), 0, 'f', 3)
-                .arg(selectedWire->minimumHeightMeters(), 0, 'f', 2)
-                .arg(selectedWire->isLowClearance()
-                         ? QStringLiteral(" (below 5 m; wire is red)")
-                         : QString())
+                .arg(QString("Sag: %1 m\nMinimum height above ground: %2 m%3")
+                         .arg(selectedWire->sagMeters(), 0, 'f', 3)
+                         .arg(selectedWire->minimumHeightMeters(), 0, 'f', 2)
+                         .arg(selectedWire->isLowClearance()
+                                  ? QStringLiteral(" (below 5 m; wire is red)")
+                                  : QString()))
                 .arg(selectedWire->expandedLength(), 0, 'f', 2)
                 .arg(selectedWire->length(), 0, 'f', 2)
                 .arg(selectedWire->mass(), 0, 'f', 3)
@@ -1559,9 +1540,7 @@ void MainSimulationWindow::refreshInspector()
     if (!selected) {
         return;
     }
-    const bool hasEditableConnectionHeight =
-        selected->kind() != ObjectKind::GroundWireConnection;
-    setPropertyVisible(connectionHeight, hasEditableConnectionHeight);
+    setPropertyVisible(connectionHeight, true);
     if (const auto* generator = dynamic_cast<const PowerGenerator*>(selected)) {
         infoLabel->setText(QString("%1\nUID: %2\nOutput: %3 V, %4 A")
                                .arg(generator->name())
@@ -1596,10 +1575,22 @@ void MainSimulationWindow::refreshInspector()
         }
     } else if (const auto* separator =
                    dynamic_cast<const WireSeparator*>(selected)) {
-        infoLabel->setText(QString("%1\nUID: %2\nSwitch current: %3 A")
+        infoLabel->setText(QString(
+                               "%1\nUID: %2\nInput voltage: %3 V\n"
+                               "Total output current: %4 A\n"
+                               "Output 1: %5 V, %6 A\n"
+                               "Output 2: %7 V, %8 A\n"
+                               "Output 3: %9 V, %10 A")
                                .arg(separator->name())
                                .arg(separator->uid())
-                               .arg(selected->current(), 0, 'f', 2));
+                               .arg(separator->voltage(), 0, 'f', 2)
+                               .arg(separator->current(), 0, 'f', 2)
+                               .arg(separator->outputVoltage(1), 0, 'f', 2)
+                               .arg(separator->outputCurrent(1), 0, 'f', 2)
+                               .arg(separator->outputVoltage(2), 0, 'f', 2)
+                               .arg(separator->outputCurrent(2), 0, 'f', 2)
+                               .arg(separator->outputVoltage(3), 0, 'f', 2)
+                               .arg(separator->outputCurrent(3), 0, 'f', 2));
         simulationLabel->setText(separator->isClosed() ? "Separator closed" :
                                                           "Separator open");
         setPropertyVisible(separatorClosed, true);
@@ -1613,7 +1604,7 @@ void MainSimulationWindow::refreshInspector()
                                .arg(selected->uid())
                                .arg(selected->voltage(), 0, 'f', 1));
     }
-    if (hasEditableConnectionHeight && !connectionHeight->hasFocus()) {
+    if (!connectionHeight->hasFocus()) {
         connectionHeight->setValue(selected->connectionHeightMeters());
     }
 }
@@ -1855,6 +1846,16 @@ void MainSimulationWindow::refreshInformationTable()
                                 .arg(std::abs(wire->current()), 0, 'f', 2);
             }
         }
+        if (const auto* separator =
+                dynamic_cast<const WireSeparator*>(object.get())) {
+            for (int terminal = 1; terminal < separator->terminalCount();
+                 ++terminal) {
+                attached << QString("Output %1: %2 V, %3 A")
+                                .arg(terminal)
+                                .arg(separator->outputVoltage(terminal), 0, 'f', 2)
+                                .arg(separator->outputCurrent(terminal), 0, 'f', 2);
+            }
+        }
         setCell(row, 11, attached.isEmpty() ? "No wires" : attached.join("; "));
     }
 
@@ -1866,7 +1867,7 @@ void MainSimulationWindow::refreshInformationTable()
         setCell(row, 0, wire->uid());
         informationTable->item(row, 0)->setData(Qt::UserRole, "wire");
         informationTable->item(row, 0)->setData(Qt::UserRole + 1, wire->id());
-        setCell(row, 1, wire->isGroundWire() ? "Ground wire" : "Wire");
+        setCell(row, 1, "Wire");
         setCell(row, 2, QString("%1:T%2 → %3:T%4")
                             .arg(from ? from->uid() : "?")
                             .arg(wire->fromTerminal())
@@ -2028,8 +2029,6 @@ void MainSimulationWindow::loadSimulation()
             object = std::make_unique<Apartment>(id, x, y);
         } else if (type == "pole") {
             object = std::make_unique<UtilityPole>(id, x, y);
-        } else if (type == "ground") {
-            object = std::make_unique<GroundWireConnection>(id, x, y);
         } else if (type == "separator") {
             object = std::make_unique<WireSeparator>(id, x, y);
         } else if (type == "generator") {
@@ -2061,7 +2060,7 @@ void MainSimulationWindow::loadSimulation()
                                               generator->currentLimit()));
         }
         if (auto* separator = dynamic_cast<WireSeparator*>(object.get())) {
-            separator->setClosed(item.value("closed").toBool(false));
+            separator->setClosed(item.value("closed").toBool(true));
         }
         for (const auto& existing : loadedObjects) {
             const bool overlaps =

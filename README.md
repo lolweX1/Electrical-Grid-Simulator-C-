@@ -14,7 +14,7 @@ Build with Qt 6 Widgets and a C++17 compiler using `make`; run the result with
   existing component and press **R** to rotate that component. Press **Delete**
   to remove the selected component and its attached wires. Re-click the active
   palette tool to resume placing after selecting an existing component.
-- Choose a house, apartment, utility pole, ground wire connection, wire separator, or power generator
+- Choose a house, apartment, utility pole, wire separator, or power generator
   in the left palette and click an empty grid cell to place it. Components
   occupy footprints derived from their icon dimensions: 64 source pixels equal
   one grid cell, rounded up, with a one-cell minimum.
@@ -34,24 +34,20 @@ Build with Qt 6 Widgets and a C++17 compiler using `make`; run the result with
   temperature change, sag profile, length, mass, and thermal expansion. Choose
   copper, aluminum, or steel and adjust its resistivity in the Properties panel.
   Every object has an editable wire connection height above ground (default:
-  house 10 m, apartment 25 m, utility pole 10 m, separator 8 m, generator 8 m;
-  ground connections are at 0 m).
+  house 10 m, apartment 25 m, utility pole 10 m, separator 8 m, generator 8 m).
   The sag graph plots actual wire height against the highest attachment height;
   wires whose lowest point is under 5 m above ground are red.
-  Press **Delete** to remove a selected wire.   A house or apartment receiving less than 99% of its required current is
+  Press **Delete** to remove a selected wire. A house or apartment receiving
+  less than 99% of its required current is
   outlined in yellow, allowing a small tolerance for ordinary feeder voltage
   drop.
   Wires turn red when shorted, overloaded, too hot, or sagging beyond the safe
   threshold.
-- Choose **Ground wire connection** to place an earth reference. Connect it only
-  to a generator, house, apartment, or utility pole to create a purple ground
-  wire and tie that circuit node to earth. The ground connection is fixed at
-  0 m; ground wires are drawn directly to it without sag and are exempt from
-  the 5 m clearance warning. Ground wires render above regular wires.
-- Wire separators are open switches by default; select one and toggle
-  **Conducting** in the properties panel to close it. The separator has one
-  input on its bottom side and three outputs; rotate it with **R** to reorient
-  its ports.
+- Wire separators conduct by default. Each has one input on its bottom side
+  and three outputs; connect any outputs needed and leave unused ones open.
+  Select a separator and toggle **Conducting** in the properties panel to
+  disconnect/reconnect all three outputs. Rotate it with **R** to reorient its
+  ports.
 - Use **Run simulation** and **Stop simulation** in the toolbar to control
   generation and thermal updates. While running, generators supply power,
   sunlight heats wires, and wind cools them; stopping freezes wire temperatures
@@ -78,8 +74,8 @@ Build with Qt 6 Widgets and a C++17 compiler using `make`; run the result with
   are saved as 20 C, regardless of the live simulation state. The included
   [stress test](<./save/stress test.json>) is a New York City-inspired layout
   with 15 dense districts across all five boroughs. It contains 60 nearby
-  generators, 60 closed distribution separators, 120 houses, 60 apartments,
-  60 ground connections, and 480 wires. The model uses 208 V residential
+  generators, 60 closed distribution separators, 120 houses, and 60 apartments,
+  connected by 420 wires. The model uses 208 V residential
   service, 250 V local sources, copper feeders, and diversified loads of about
   3.2 kW per house and 5.1 kW per apartment.
 - Right-click and release to switch back to **None**. Right-click-drag or
@@ -118,10 +114,6 @@ Directly bridging a
 generator's positive and return terminals produces a red, current-limited fault.
 Wire elevation follows a parabolic sag profile between the connection heights of
 its endpoint objects. Clearance is measured at the lowest point of that profile.
-Ground connections provide a low-resistance reference to earth; only generators,
-houses, apartments, and utility poles may have a ground wire attached. These
-wires connect directly to ground without applying the overhead sag or clearance
-model.
 Series loads share current and divide source voltage according to their
 resistances; parallel branches share bus voltage and their currents add at the
 source. Each generator has four internally bussed output terminals and four

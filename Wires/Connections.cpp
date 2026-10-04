@@ -1,7 +1,6 @@
 #include "Connections.hpp"
 
 #include "../Objects/House.hpp"
-#include "../Objects/GroundWireConnection.hpp"
 #include "../Objects/PowerGenerator.hpp"
 #include "../Objects/UtilityPole.hpp"
 #include "../Objects/WireSeparator.hpp"
@@ -13,6 +12,8 @@
 #include <vector>
 
 namespace {
+constexpr double separatorConductanceSiemens = 100.0;
+
 enum class GeneratorMode {
     VoltageSource,
     CurrentLimited,
@@ -67,7 +68,8 @@ bool solveDenseSystem(std::vector<std::vector<double>>& matrix,
 }
 
 bool solveLinearSystem(const std::vector<std::vector<double>>& matrix,
-                       std::vector<double>& values)
+                       std::vector<double>& values,
+                       const std::vector<std::size_t>& referenceNodes)
 {
     const std::size_t size = values.size();
     std::vector<bool> visited(size, false);
@@ -102,6 +104,23 @@ bool solveLinearSystem(const std::vector<std::vector<double>>& matrix,
                 localMatrix[localRow][localColumn] =
                     matrix[globalRow][component[localColumn]];
             }
+        }
+
+        std::size_t referenceLocal = component.size();
+        for (std::size_t local = 0; local < component.size(); ++local) {
+            if (std::find(referenceNodes.begin(), referenceNodes.end(),
+                          component[local]) != referenceNodes.end()) {
+                referenceLocal = local;
+                break;
+            }
+        }
+        if (referenceLocal < component.size()) {
+            for (std::size_t local = 0; local < component.size(); ++local) {
+                localMatrix[local][referenceLocal] = 0.0;
+                localMatrix[referenceLocal][local] = 0.0;
+            }
+            localMatrix[referenceLocal][referenceLocal] = 1.0;
+            localValues[referenceLocal] = 0.0;
         }
 
         if (!solveDenseSystem(localMatrix, localValues)) {
@@ -147,66 +166,10 @@ bool Connections::addWire(int id, const ParentOfObjects& fromObject,
         }
         return false;
     }
-    const auto isGroundable = [](ObjectKind kind) {
-        return kind == ObjectKind::PowerGenerator ||
-               kind == ObjectKind::House || kind == ObjectKind::Apartment ||
-               kind == ObjectKind::UtilityPole;
-    };
-    const bool fromIsGroundConnection =
-        fromObject.kind() == ObjectKind::GroundWireConnection;
-    const bool toIsGroundConnection =
-        toObject.kind() == ObjectKind::GroundWireConnection;
-    const auto hasValidGroundPort = [](const ParentOfObjects& object,
-                                       int terminal) {
-        if (object.kind() == ObjectKind::GroundWireConnection) {
-            return terminal == 0;
-        }
-        if (object.kind() == ObjectKind::House ||
-            object.kind() == ObjectKind::Apartment) {
-            return terminal == 1;
-        }
-        return true;
-    };
-    if ((fromIsGroundConnection || toIsGroundConnection) &&
-        (fromIsGroundConnection == toIsGroundConnection ||
-         !isGroundable(fromIsGroundConnection ? toObject.kind()
-                                              : fromObject.kind()))) {
-        if (errorMessage) {
-            *errorMessage =
-                "Ground connections can only be wired to generators, houses, apartments, or utility poles.";
-        }
-        return false;
-    }
-    if ((fromIsGroundConnection &&
-         !hasValidGroundPort(toObject, toTerminal)) ||
-        (toIsGroundConnection &&
-         !hasValidGroundPort(fromObject, fromTerminal))) {
-        if (errorMessage) {
-            *errorMessage = "Ground wires must use the ground input and a building output.";
-        }
-        return false;
-    }
-
     for (const auto& wire : connections) {
         if (wire->id() == id) {
             if (errorMessage) {
                 *errorMessage = "Wire IDs must be unique.";
-            }
-            return false;
-        }
-        const bool fromPortOccupied =
-            (wire->fromObject() == fromObjectId &&
-             wire->fromTerminal() == fromTerminal) ||
-            (wire->toObject() == fromObjectId &&
-             wire->toTerminal() == fromTerminal);
-        const bool toPortOccupied =
-            (wire->fromObject() == toObjectId &&
-             wire->fromTerminal() == toTerminal) ||
-            (wire->toObject() == toObjectId &&
-             wire->toTerminal() == toTerminal);
-        if (fromPortOccupied || toPortOccupied) {
-            if (errorMessage) {
-                *errorMessage = "Each input or output terminal supports one wire.";
             }
             return false;
         }
@@ -228,12 +191,23 @@ bool Connections::addWire(int id, const ParentOfObjects& fromObject,
         }
     }
 
+    const auto isTerminalAtCapacity = [this](const ParentOfObjects& object,
+                                             int terminal) {
+        return terminalConnectionCount(object.id(), terminal) >= 1;
+    };
+    if (isTerminalAtCapacity(fromObject, fromTerminal) ||
+        isTerminalAtCapacity(toObject, toTerminal)) {
+        if (errorMessage) {
+            *errorMessage = "Each component terminal supports one wire.";
+        }
+        return false;
+    }
+
     connections.push_back(std::make_unique<Wire>(
         id, fromObjectId, fromTerminal, toObjectId, toTerminal, lengthMeters,
         WireMaterial::Aluminum, shortCircuit));
     connections.back()->setEndpointHeights(
         fromObject.connectionHeightMeters(), toObject.connectionHeightMeters());
-    connections.back()->setGroundWire(fromIsGroundConnection || toIsGroundConnection);
     return true;
 }
 
@@ -346,6 +320,7 @@ bool Connections::solve(const std::vector<ParentOfObjects*>& objects,
 
     std::vector<std::size_t> generatorPositive;
     std::vector<std::size_t> generatorNegative;
+    std::vector<std::size_t> referenceNodes;
     std::vector<const PowerGenerator*> generators;
     std::vector<GeneratorMode> modes;
     for (const ParentOfObjects* object : objects) {
@@ -356,12 +331,21 @@ bool Connections::solve(const std::vector<ParentOfObjects*>& objects,
             findTerminal(generator->id(), 4, &negative);
             generatorPositive.push_back(positive);
             generatorNegative.push_back(negative);
+            referenceNodes.push_back(negative);
             generators.push_back(generator);
             modes.push_back(GeneratorMode::VoltageSource);
         }
     }
 
     std::vector<double> voltages(nodeCount, 0.0);
+    for (ParentOfObjects* object : objects) {
+        if (auto* separator = dynamic_cast<WireSeparator*>(object)) {
+            for (int terminal = 1; terminal < separator->terminalCount();
+                 ++terminal) {
+                separator->setOutputElectricalState(terminal, 0.0, 0.0);
+            }
+        }
+    }
     const std::size_t maximumIterations =
         std::max<std::size_t>(8, generators.size() * 4 + 4);
     bool converged = false;
@@ -406,7 +390,8 @@ bool Connections::solve(const std::vector<ParentOfObjects*>& objects,
                     for (int terminal = 1; terminal < separator->terminalCount(); ++terminal) {
                         std::size_t output = 0;
                         findTerminal(separator->id(), terminal, &output);
-                        addConductance(matrix, input, output, 100.0);
+                        addConductance(matrix, input, output,
+                                       separatorConductanceSiemens);
                     }
                 }
             } else if (dynamic_cast<const UtilityPole*>(object)) {
@@ -415,10 +400,6 @@ bool Connections::solve(const std::vector<ParentOfObjects*>& objects,
                 findTerminal(object->id(), 0, &firstTerminal);
                 findTerminal(object->id(), 1, &secondTerminal);
                 addConductance(matrix, firstTerminal, secondTerminal, 10000.0);
-            } else if (object->kind() == ObjectKind::GroundWireConnection) {
-                std::size_t groundTerminal = 0;
-                findTerminal(object->id(), 0, &groundTerminal);
-                matrix[groundTerminal][groundTerminal] += 10.0;
             }
         }
 
@@ -446,7 +427,7 @@ bool Connections::solve(const std::vector<ParentOfObjects*>& objects,
             }
         }
 
-        if (!solveLinearSystem(matrix, injections)) {
+        if (!solveLinearSystem(matrix, injections, referenceNodes)) {
             if (errorMessage) {
                 *errorMessage = "The electrical network could not be solved.";
             }
@@ -497,6 +478,10 @@ bool Connections::solve(const std::vector<ParentOfObjects*>& objects,
             std::size_t negative = 0;
             findTerminal(object->id(), 4, &negative);
             objectVoltage -= voltages[negative];
+        } else if (const auto* house = dynamic_cast<const House*>(object)) {
+            std::size_t negative = 0;
+            findTerminal(house->id(), 1, &negative);
+            objectVoltage -= voltages[negative];
         } else if (object->terminalCount() == 2) {
             std::size_t negative = 0;
             findTerminal(object->id(), 1, &negative);
@@ -512,8 +497,7 @@ bool Connections::solve(const std::vector<ParentOfObjects*>& objects,
                 generator->internalResistance();
             object->setCurrent(
                 std::clamp(sourceCurrent, 0.0, generator->currentLimit()));
-        } else if (const auto* separator =
-                       dynamic_cast<const WireSeparator*>(object)) {
+        } else if (auto* separator = dynamic_cast<WireSeparator*>(object)) {
             double switchCurrent = 0.0;
             if (separator->isClosed()) {
                 std::size_t input = 0;
@@ -521,7 +505,12 @@ bool Connections::solve(const std::vector<ParentOfObjects*>& objects,
                 for (int terminal = 1; terminal < separator->terminalCount(); ++terminal) {
                     std::size_t output = 0;
                     findTerminal(separator->id(), terminal, &output);
-                    switchCurrent += (voltages[input] - voltages[output]) * 100.0;
+                    const double outputCurrent =
+                        (voltages[input] - voltages[output]) *
+                        separatorConductanceSiemens;
+                    switchCurrent += outputCurrent;
+                    separator->setOutputElectricalState(
+                        terminal, voltages[output], outputCurrent);
                 }
             }
             object->setCurrent(switchCurrent);

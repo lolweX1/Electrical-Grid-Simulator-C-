@@ -15,8 +15,7 @@
                     "wireSeparators":  60,
                     "houses":  120,
                     "apartments":  60,
-                    "groundConnections":  60,
-                    "totalWires":  480
+                    "totalWires":  420
                 },
     "objects":  [
                     {
@@ -43,16 +42,6 @@
                         "borough":  "Manhattan"
                     },
                     {
-                        "id":  3,
-                        "uid":  "CITY0003",
-                        "type":  "ground",
-                        "x":  4,
-                        "y":  17,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Manhattan"
-                    },
-                    {
                         "id":  4,
                         "uid":  "CITY0004",
                         "type":  "generator",
@@ -73,16 +62,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Manhattan"
-                    },
-                    {
-                        "id":  6,
-                        "uid":  "CITY0006",
-                        "type":  "ground",
-                        "x":  9,
-                        "y":  17,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Manhattan"
                     },
                     {
@@ -109,16 +88,6 @@
                         "borough":  "Manhattan"
                     },
                     {
-                        "id":  9,
-                        "uid":  "CITY0009",
-                        "type":  "ground",
-                        "x":  4,
-                        "y":  21,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Manhattan"
-                    },
-                    {
                         "id":  10,
                         "uid":  "CITY0010",
                         "type":  "generator",
@@ -139,16 +108,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Manhattan"
-                    },
-                    {
-                        "id":  12,
-                        "uid":  "CITY0012",
-                        "type":  "ground",
-                        "x":  9,
-                        "y":  21,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Manhattan"
                     },
                     {
@@ -319,16 +278,6 @@
                         "borough":  "Manhattan"
                     },
                     {
-                        "id":  27,
-                        "uid":  "CITY0027",
-                        "type":  "ground",
-                        "x":  80,
-                        "y":  17,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Manhattan"
-                    },
-                    {
                         "id":  28,
                         "uid":  "CITY0028",
                         "type":  "generator",
@@ -349,16 +298,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Manhattan"
-                    },
-                    {
-                        "id":  30,
-                        "uid":  "CITY0030",
-                        "type":  "ground",
-                        "x":  85,
-                        "y":  17,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Manhattan"
                     },
                     {
@@ -385,16 +324,6 @@
                         "borough":  "Manhattan"
                     },
                     {
-                        "id":  33,
-                        "uid":  "CITY0033",
-                        "type":  "ground",
-                        "x":  80,
-                        "y":  21,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Manhattan"
-                    },
-                    {
                         "id":  34,
                         "uid":  "CITY0034",
                         "type":  "generator",
@@ -415,16 +344,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Manhattan"
-                    },
-                    {
-                        "id":  36,
-                        "uid":  "CITY0036",
-                        "type":  "ground",
-                        "x":  85,
-                        "y":  21,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Manhattan"
                     },
                     {
@@ -595,16 +514,6 @@
                         "borough":  "Manhattan"
                     },
                     {
-                        "id":  51,
-                        "uid":  "CITY0051",
-                        "type":  "ground",
-                        "x":  156,
-                        "y":  17,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Manhattan"
-                    },
-                    {
                         "id":  52,
                         "uid":  "CITY0052",
                         "type":  "generator",
@@ -625,16 +534,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Manhattan"
-                    },
-                    {
-                        "id":  54,
-                        "uid":  "CITY0054",
-                        "type":  "ground",
-                        "x":  161,
-                        "y":  17,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Manhattan"
                     },
                     {
@@ -661,16 +560,6 @@
                         "borough":  "Manhattan"
                     },
                     {
-                        "id":  57,
-                        "uid":  "CITY0057",
-                        "type":  "ground",
-                        "x":  156,
-                        "y":  21,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Manhattan"
-                    },
-                    {
                         "id":  58,
                         "uid":  "CITY0058",
                         "type":  "generator",
@@ -691,16 +580,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Manhattan"
-                    },
-                    {
-                        "id":  60,
-                        "uid":  "CITY0060",
-                        "type":  "ground",
-                        "x":  161,
-                        "y":  21,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Manhattan"
                     },
                     {
@@ -871,16 +750,6 @@
                         "borough":  "Brooklyn"
                     },
                     {
-                        "id":  75,
-                        "uid":  "CITY0075",
-                        "type":  "ground",
-                        "x":  4,
-                        "y":  81,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Brooklyn"
-                    },
-                    {
                         "id":  76,
                         "uid":  "CITY0076",
                         "type":  "generator",
@@ -901,16 +770,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Brooklyn"
-                    },
-                    {
-                        "id":  78,
-                        "uid":  "CITY0078",
-                        "type":  "ground",
-                        "x":  9,
-                        "y":  81,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Brooklyn"
                     },
                     {
@@ -937,16 +796,6 @@
                         "borough":  "Brooklyn"
                     },
                     {
-                        "id":  81,
-                        "uid":  "CITY0081",
-                        "type":  "ground",
-                        "x":  4,
-                        "y":  85,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Brooklyn"
-                    },
-                    {
                         "id":  82,
                         "uid":  "CITY0082",
                         "type":  "generator",
@@ -967,16 +816,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Brooklyn"
-                    },
-                    {
-                        "id":  84,
-                        "uid":  "CITY0084",
-                        "type":  "ground",
-                        "x":  9,
-                        "y":  85,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Brooklyn"
                     },
                     {
@@ -1147,16 +986,6 @@
                         "borough":  "Brooklyn"
                     },
                     {
-                        "id":  99,
-                        "uid":  "CITY0099",
-                        "type":  "ground",
-                        "x":  80,
-                        "y":  81,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Brooklyn"
-                    },
-                    {
                         "id":  100,
                         "uid":  "CITY0100",
                         "type":  "generator",
@@ -1177,16 +1006,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Brooklyn"
-                    },
-                    {
-                        "id":  102,
-                        "uid":  "CITY0102",
-                        "type":  "ground",
-                        "x":  85,
-                        "y":  81,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Brooklyn"
                     },
                     {
@@ -1213,16 +1032,6 @@
                         "borough":  "Brooklyn"
                     },
                     {
-                        "id":  105,
-                        "uid":  "CITY0105",
-                        "type":  "ground",
-                        "x":  80,
-                        "y":  85,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Brooklyn"
-                    },
-                    {
                         "id":  106,
                         "uid":  "CITY0106",
                         "type":  "generator",
@@ -1243,16 +1052,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Brooklyn"
-                    },
-                    {
-                        "id":  108,
-                        "uid":  "CITY0108",
-                        "type":  "ground",
-                        "x":  85,
-                        "y":  85,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Brooklyn"
                     },
                     {
@@ -1423,16 +1222,6 @@
                         "borough":  "Brooklyn"
                     },
                     {
-                        "id":  123,
-                        "uid":  "CITY0123",
-                        "type":  "ground",
-                        "x":  156,
-                        "y":  81,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Brooklyn"
-                    },
-                    {
                         "id":  124,
                         "uid":  "CITY0124",
                         "type":  "generator",
@@ -1453,16 +1242,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Brooklyn"
-                    },
-                    {
-                        "id":  126,
-                        "uid":  "CITY0126",
-                        "type":  "ground",
-                        "x":  161,
-                        "y":  81,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Brooklyn"
                     },
                     {
@@ -1489,16 +1268,6 @@
                         "borough":  "Brooklyn"
                     },
                     {
-                        "id":  129,
-                        "uid":  "CITY0129",
-                        "type":  "ground",
-                        "x":  156,
-                        "y":  85,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Brooklyn"
-                    },
-                    {
                         "id":  130,
                         "uid":  "CITY0130",
                         "type":  "generator",
@@ -1519,16 +1288,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Brooklyn"
-                    },
-                    {
-                        "id":  132,
-                        "uid":  "CITY0132",
-                        "type":  "ground",
-                        "x":  161,
-                        "y":  85,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Brooklyn"
                     },
                     {
@@ -1699,16 +1458,6 @@
                         "borough":  "Queens"
                     },
                     {
-                        "id":  147,
-                        "uid":  "CITY0147",
-                        "type":  "ground",
-                        "x":  4,
-                        "y":  145,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Queens"
-                    },
-                    {
                         "id":  148,
                         "uid":  "CITY0148",
                         "type":  "generator",
@@ -1729,16 +1478,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Queens"
-                    },
-                    {
-                        "id":  150,
-                        "uid":  "CITY0150",
-                        "type":  "ground",
-                        "x":  9,
-                        "y":  145,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Queens"
                     },
                     {
@@ -1765,16 +1504,6 @@
                         "borough":  "Queens"
                     },
                     {
-                        "id":  153,
-                        "uid":  "CITY0153",
-                        "type":  "ground",
-                        "x":  4,
-                        "y":  149,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Queens"
-                    },
-                    {
                         "id":  154,
                         "uid":  "CITY0154",
                         "type":  "generator",
@@ -1795,16 +1524,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Queens"
-                    },
-                    {
-                        "id":  156,
-                        "uid":  "CITY0156",
-                        "type":  "ground",
-                        "x":  9,
-                        "y":  149,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Queens"
                     },
                     {
@@ -1975,16 +1694,6 @@
                         "borough":  "Queens"
                     },
                     {
-                        "id":  171,
-                        "uid":  "CITY0171",
-                        "type":  "ground",
-                        "x":  80,
-                        "y":  145,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Queens"
-                    },
-                    {
                         "id":  172,
                         "uid":  "CITY0172",
                         "type":  "generator",
@@ -2005,16 +1714,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Queens"
-                    },
-                    {
-                        "id":  174,
-                        "uid":  "CITY0174",
-                        "type":  "ground",
-                        "x":  85,
-                        "y":  145,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Queens"
                     },
                     {
@@ -2041,16 +1740,6 @@
                         "borough":  "Queens"
                     },
                     {
-                        "id":  177,
-                        "uid":  "CITY0177",
-                        "type":  "ground",
-                        "x":  80,
-                        "y":  149,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Queens"
-                    },
-                    {
                         "id":  178,
                         "uid":  "CITY0178",
                         "type":  "generator",
@@ -2071,16 +1760,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Queens"
-                    },
-                    {
-                        "id":  180,
-                        "uid":  "CITY0180",
-                        "type":  "ground",
-                        "x":  85,
-                        "y":  149,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Queens"
                     },
                     {
@@ -2251,16 +1930,6 @@
                         "borough":  "Queens"
                     },
                     {
-                        "id":  195,
-                        "uid":  "CITY0195",
-                        "type":  "ground",
-                        "x":  156,
-                        "y":  145,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Queens"
-                    },
-                    {
                         "id":  196,
                         "uid":  "CITY0196",
                         "type":  "generator",
@@ -2281,16 +1950,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Queens"
-                    },
-                    {
-                        "id":  198,
-                        "uid":  "CITY0198",
-                        "type":  "ground",
-                        "x":  161,
-                        "y":  145,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Queens"
                     },
                     {
@@ -2317,16 +1976,6 @@
                         "borough":  "Queens"
                     },
                     {
-                        "id":  201,
-                        "uid":  "CITY0201",
-                        "type":  "ground",
-                        "x":  156,
-                        "y":  149,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Queens"
-                    },
-                    {
                         "id":  202,
                         "uid":  "CITY0202",
                         "type":  "generator",
@@ -2347,16 +1996,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Queens"
-                    },
-                    {
-                        "id":  204,
-                        "uid":  "CITY0204",
-                        "type":  "ground",
-                        "x":  161,
-                        "y":  149,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Queens"
                     },
                     {
@@ -2527,16 +2166,6 @@
                         "borough":  "The Bronx"
                     },
                     {
-                        "id":  219,
-                        "uid":  "CITY0219",
-                        "type":  "ground",
-                        "x":  4,
-                        "y":  209,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "The Bronx"
-                    },
-                    {
                         "id":  220,
                         "uid":  "CITY0220",
                         "type":  "generator",
@@ -2557,16 +2186,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "The Bronx"
-                    },
-                    {
-                        "id":  222,
-                        "uid":  "CITY0222",
-                        "type":  "ground",
-                        "x":  9,
-                        "y":  209,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "The Bronx"
                     },
                     {
@@ -2593,16 +2212,6 @@
                         "borough":  "The Bronx"
                     },
                     {
-                        "id":  225,
-                        "uid":  "CITY0225",
-                        "type":  "ground",
-                        "x":  4,
-                        "y":  213,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "The Bronx"
-                    },
-                    {
                         "id":  226,
                         "uid":  "CITY0226",
                         "type":  "generator",
@@ -2623,16 +2232,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "The Bronx"
-                    },
-                    {
-                        "id":  228,
-                        "uid":  "CITY0228",
-                        "type":  "ground",
-                        "x":  9,
-                        "y":  213,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "The Bronx"
                     },
                     {
@@ -2803,16 +2402,6 @@
                         "borough":  "The Bronx"
                     },
                     {
-                        "id":  243,
-                        "uid":  "CITY0243",
-                        "type":  "ground",
-                        "x":  80,
-                        "y":  209,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "The Bronx"
-                    },
-                    {
                         "id":  244,
                         "uid":  "CITY0244",
                         "type":  "generator",
@@ -2833,16 +2422,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "The Bronx"
-                    },
-                    {
-                        "id":  246,
-                        "uid":  "CITY0246",
-                        "type":  "ground",
-                        "x":  85,
-                        "y":  209,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "The Bronx"
                     },
                     {
@@ -2869,16 +2448,6 @@
                         "borough":  "The Bronx"
                     },
                     {
-                        "id":  249,
-                        "uid":  "CITY0249",
-                        "type":  "ground",
-                        "x":  80,
-                        "y":  213,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "The Bronx"
-                    },
-                    {
                         "id":  250,
                         "uid":  "CITY0250",
                         "type":  "generator",
@@ -2899,16 +2468,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "The Bronx"
-                    },
-                    {
-                        "id":  252,
-                        "uid":  "CITY0252",
-                        "type":  "ground",
-                        "x":  85,
-                        "y":  213,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "The Bronx"
                     },
                     {
@@ -3079,16 +2638,6 @@
                         "borough":  "The Bronx"
                     },
                     {
-                        "id":  267,
-                        "uid":  "CITY0267",
-                        "type":  "ground",
-                        "x":  156,
-                        "y":  209,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "The Bronx"
-                    },
-                    {
                         "id":  268,
                         "uid":  "CITY0268",
                         "type":  "generator",
@@ -3109,16 +2658,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "The Bronx"
-                    },
-                    {
-                        "id":  270,
-                        "uid":  "CITY0270",
-                        "type":  "ground",
-                        "x":  161,
-                        "y":  209,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "The Bronx"
                     },
                     {
@@ -3145,16 +2684,6 @@
                         "borough":  "The Bronx"
                     },
                     {
-                        "id":  273,
-                        "uid":  "CITY0273",
-                        "type":  "ground",
-                        "x":  156,
-                        "y":  213,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "The Bronx"
-                    },
-                    {
                         "id":  274,
                         "uid":  "CITY0274",
                         "type":  "generator",
@@ -3175,16 +2704,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "The Bronx"
-                    },
-                    {
-                        "id":  276,
-                        "uid":  "CITY0276",
-                        "type":  "ground",
-                        "x":  161,
-                        "y":  213,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "The Bronx"
                     },
                     {
@@ -3355,16 +2874,6 @@
                         "borough":  "Staten Island"
                     },
                     {
-                        "id":  291,
-                        "uid":  "CITY0291",
-                        "type":  "ground",
-                        "x":  42,
-                        "y":  273,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Staten Island"
-                    },
-                    {
                         "id":  292,
                         "uid":  "CITY0292",
                         "type":  "generator",
@@ -3385,16 +2894,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Staten Island"
-                    },
-                    {
-                        "id":  294,
-                        "uid":  "CITY0294",
-                        "type":  "ground",
-                        "x":  47,
-                        "y":  273,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Staten Island"
                     },
                     {
@@ -3421,16 +2920,6 @@
                         "borough":  "Staten Island"
                     },
                     {
-                        "id":  297,
-                        "uid":  "CITY0297",
-                        "type":  "ground",
-                        "x":  42,
-                        "y":  277,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Staten Island"
-                    },
-                    {
                         "id":  298,
                         "uid":  "CITY0298",
                         "type":  "generator",
@@ -3451,16 +2940,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Staten Island"
-                    },
-                    {
-                        "id":  300,
-                        "uid":  "CITY0300",
-                        "type":  "ground",
-                        "x":  47,
-                        "y":  277,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Staten Island"
                     },
                     {
@@ -3631,16 +3110,6 @@
                         "borough":  "Staten Island"
                     },
                     {
-                        "id":  315,
-                        "uid":  "CITY0315",
-                        "type":  "ground",
-                        "x":  118,
-                        "y":  273,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Staten Island"
-                    },
-                    {
                         "id":  316,
                         "uid":  "CITY0316",
                         "type":  "generator",
@@ -3661,16 +3130,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Staten Island"
-                    },
-                    {
-                        "id":  318,
-                        "uid":  "CITY0318",
-                        "type":  "ground",
-                        "x":  123,
-                        "y":  273,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Staten Island"
                     },
                     {
@@ -3697,16 +3156,6 @@
                         "borough":  "Staten Island"
                     },
                     {
-                        "id":  321,
-                        "uid":  "CITY0321",
-                        "type":  "ground",
-                        "x":  118,
-                        "y":  277,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Staten Island"
-                    },
-                    {
                         "id":  322,
                         "uid":  "CITY0322",
                         "type":  "generator",
@@ -3727,16 +3176,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Staten Island"
-                    },
-                    {
-                        "id":  324,
-                        "uid":  "CITY0324",
-                        "type":  "ground",
-                        "x":  123,
-                        "y":  277,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Staten Island"
                     },
                     {
@@ -3907,16 +3346,6 @@
                         "borough":  "Staten Island"
                     },
                     {
-                        "id":  339,
-                        "uid":  "CITY0339",
-                        "type":  "ground",
-                        "x":  194,
-                        "y":  273,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Staten Island"
-                    },
-                    {
                         "id":  340,
                         "uid":  "CITY0340",
                         "type":  "generator",
@@ -3937,16 +3366,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Staten Island"
-                    },
-                    {
-                        "id":  342,
-                        "uid":  "CITY0342",
-                        "type":  "ground",
-                        "x":  199,
-                        "y":  273,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Staten Island"
                     },
                     {
@@ -3973,16 +3392,6 @@
                         "borough":  "Staten Island"
                     },
                     {
-                        "id":  345,
-                        "uid":  "CITY0345",
-                        "type":  "ground",
-                        "x":  194,
-                        "y":  277,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
-                        "borough":  "Staten Island"
-                    },
-                    {
                         "id":  346,
                         "uid":  "CITY0346",
                         "type":  "generator",
@@ -4003,16 +3412,6 @@
                         "rotation":  0,
                         "connectionHeightMeters":  8,
                         "closed":  true,
-                        "borough":  "Staten Island"
-                    },
-                    {
-                        "id":  348,
-                        "uid":  "CITY0348",
-                        "type":  "ground",
-                        "x":  199,
-                        "y":  277,
-                        "rotation":  0,
-                        "connectionHeightMeters":  0,
                         "borough":  "Staten Island"
                     },
                     {
@@ -4175,19 +3574,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  2,
-                      "uid":  "WIRE0002",
-                      "fromObject":  1,
-                      "fromTerminal":  7,
-                      "toObject":  3,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  3,
                       "uid":  "WIRE0003",
                       "fromObject":  2,
@@ -4273,19 +3659,6 @@
                       "toObject":  5,
                       "toTerminal":  0,
                       "lengthMeters":  195.6,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  10,
-                      "uid":  "WIRE0010",
-                      "fromObject":  4,
-                      "fromTerminal":  7,
-                      "toObject":  6,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -4383,19 +3756,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  18,
-                      "uid":  "WIRE0018",
-                      "fromObject":  7,
-                      "fromTerminal":  7,
-                      "toObject":  9,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  19,
                       "uid":  "WIRE0019",
                       "fromObject":  8,
@@ -4481,19 +3841,6 @@
                       "toObject":  11,
                       "toTerminal":  0,
                       "lengthMeters":  200.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  26,
-                      "uid":  "WIRE0026",
-                      "fromObject":  10,
-                      "fromTerminal":  7,
-                      "toObject":  12,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -4591,19 +3938,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  34,
-                      "uid":  "WIRE0034",
-                      "fromObject":  25,
-                      "fromTerminal":  7,
-                      "toObject":  27,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  35,
                       "uid":  "WIRE0035",
                       "fromObject":  26,
@@ -4689,19 +4023,6 @@
                       "toObject":  29,
                       "toTerminal":  0,
                       "lengthMeters":  195.6,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  42,
-                      "uid":  "WIRE0042",
-                      "fromObject":  28,
-                      "fromTerminal":  7,
-                      "toObject":  30,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -4799,19 +4120,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  50,
-                      "uid":  "WIRE0050",
-                      "fromObject":  31,
-                      "fromTerminal":  7,
-                      "toObject":  33,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  51,
                       "uid":  "WIRE0051",
                       "fromObject":  32,
@@ -4897,19 +4205,6 @@
                       "toObject":  35,
                       "toTerminal":  0,
                       "lengthMeters":  200.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  58,
-                      "uid":  "WIRE0058",
-                      "fromObject":  34,
-                      "fromTerminal":  7,
-                      "toObject":  36,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -5007,19 +4302,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  66,
-                      "uid":  "WIRE0066",
-                      "fromObject":  49,
-                      "fromTerminal":  7,
-                      "toObject":  51,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  67,
                       "uid":  "WIRE0067",
                       "fromObject":  50,
@@ -5105,19 +4387,6 @@
                       "toObject":  53,
                       "toTerminal":  0,
                       "lengthMeters":  195.6,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  74,
-                      "uid":  "WIRE0074",
-                      "fromObject":  52,
-                      "fromTerminal":  7,
-                      "toObject":  54,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -5215,19 +4484,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  82,
-                      "uid":  "WIRE0082",
-                      "fromObject":  55,
-                      "fromTerminal":  7,
-                      "toObject":  57,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  83,
                       "uid":  "WIRE0083",
                       "fromObject":  56,
@@ -5313,19 +4569,6 @@
                       "toObject":  59,
                       "toTerminal":  0,
                       "lengthMeters":  200.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  90,
-                      "uid":  "WIRE0090",
-                      "fromObject":  58,
-                      "fromTerminal":  7,
-                      "toObject":  60,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -5423,19 +4666,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  98,
-                      "uid":  "WIRE0098",
-                      "fromObject":  73,
-                      "fromTerminal":  7,
-                      "toObject":  75,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  99,
                       "uid":  "WIRE0099",
                       "fromObject":  74,
@@ -5521,19 +4751,6 @@
                       "toObject":  77,
                       "toTerminal":  0,
                       "lengthMeters":  195.6,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  106,
-                      "uid":  "WIRE0106",
-                      "fromObject":  76,
-                      "fromTerminal":  7,
-                      "toObject":  78,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -5631,19 +4848,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  114,
-                      "uid":  "WIRE0114",
-                      "fromObject":  79,
-                      "fromTerminal":  7,
-                      "toObject":  81,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  115,
                       "uid":  "WIRE0115",
                       "fromObject":  80,
@@ -5729,19 +4933,6 @@
                       "toObject":  83,
                       "toTerminal":  0,
                       "lengthMeters":  200.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  122,
-                      "uid":  "WIRE0122",
-                      "fromObject":  82,
-                      "fromTerminal":  7,
-                      "toObject":  84,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -5839,19 +5030,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  130,
-                      "uid":  "WIRE0130",
-                      "fromObject":  97,
-                      "fromTerminal":  7,
-                      "toObject":  99,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  131,
                       "uid":  "WIRE0131",
                       "fromObject":  98,
@@ -5937,19 +5115,6 @@
                       "toObject":  101,
                       "toTerminal":  0,
                       "lengthMeters":  195.6,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  138,
-                      "uid":  "WIRE0138",
-                      "fromObject":  100,
-                      "fromTerminal":  7,
-                      "toObject":  102,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -6047,19 +5212,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  146,
-                      "uid":  "WIRE0146",
-                      "fromObject":  103,
-                      "fromTerminal":  7,
-                      "toObject":  105,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  147,
                       "uid":  "WIRE0147",
                       "fromObject":  104,
@@ -6145,19 +5297,6 @@
                       "toObject":  107,
                       "toTerminal":  0,
                       "lengthMeters":  200.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  154,
-                      "uid":  "WIRE0154",
-                      "fromObject":  106,
-                      "fromTerminal":  7,
-                      "toObject":  108,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -6255,19 +5394,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  162,
-                      "uid":  "WIRE0162",
-                      "fromObject":  121,
-                      "fromTerminal":  7,
-                      "toObject":  123,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  163,
                       "uid":  "WIRE0163",
                       "fromObject":  122,
@@ -6353,19 +5479,6 @@
                       "toObject":  125,
                       "toTerminal":  0,
                       "lengthMeters":  195.6,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  170,
-                      "uid":  "WIRE0170",
-                      "fromObject":  124,
-                      "fromTerminal":  7,
-                      "toObject":  126,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -6463,19 +5576,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  178,
-                      "uid":  "WIRE0178",
-                      "fromObject":  127,
-                      "fromTerminal":  7,
-                      "toObject":  129,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  179,
                       "uid":  "WIRE0179",
                       "fromObject":  128,
@@ -6561,19 +5661,6 @@
                       "toObject":  131,
                       "toTerminal":  0,
                       "lengthMeters":  200.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  186,
-                      "uid":  "WIRE0186",
-                      "fromObject":  130,
-                      "fromTerminal":  7,
-                      "toObject":  132,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -6671,19 +5758,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  194,
-                      "uid":  "WIRE0194",
-                      "fromObject":  145,
-                      "fromTerminal":  7,
-                      "toObject":  147,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  195,
                       "uid":  "WIRE0195",
                       "fromObject":  146,
@@ -6769,19 +5843,6 @@
                       "toObject":  149,
                       "toTerminal":  0,
                       "lengthMeters":  195.6,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  202,
-                      "uid":  "WIRE0202",
-                      "fromObject":  148,
-                      "fromTerminal":  7,
-                      "toObject":  150,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -6879,19 +5940,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  210,
-                      "uid":  "WIRE0210",
-                      "fromObject":  151,
-                      "fromTerminal":  7,
-                      "toObject":  153,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  211,
                       "uid":  "WIRE0211",
                       "fromObject":  152,
@@ -6977,19 +6025,6 @@
                       "toObject":  155,
                       "toTerminal":  0,
                       "lengthMeters":  200.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  218,
-                      "uid":  "WIRE0218",
-                      "fromObject":  154,
-                      "fromTerminal":  7,
-                      "toObject":  156,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -7087,19 +6122,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  226,
-                      "uid":  "WIRE0226",
-                      "fromObject":  169,
-                      "fromTerminal":  7,
-                      "toObject":  171,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  227,
                       "uid":  "WIRE0227",
                       "fromObject":  170,
@@ -7185,19 +6207,6 @@
                       "toObject":  173,
                       "toTerminal":  0,
                       "lengthMeters":  195.6,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  234,
-                      "uid":  "WIRE0234",
-                      "fromObject":  172,
-                      "fromTerminal":  7,
-                      "toObject":  174,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -7295,19 +6304,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  242,
-                      "uid":  "WIRE0242",
-                      "fromObject":  175,
-                      "fromTerminal":  7,
-                      "toObject":  177,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  243,
                       "uid":  "WIRE0243",
                       "fromObject":  176,
@@ -7393,19 +6389,6 @@
                       "toObject":  179,
                       "toTerminal":  0,
                       "lengthMeters":  200.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  250,
-                      "uid":  "WIRE0250",
-                      "fromObject":  178,
-                      "fromTerminal":  7,
-                      "toObject":  180,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -7503,19 +6486,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  258,
-                      "uid":  "WIRE0258",
-                      "fromObject":  193,
-                      "fromTerminal":  7,
-                      "toObject":  195,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  259,
                       "uid":  "WIRE0259",
                       "fromObject":  194,
@@ -7601,19 +6571,6 @@
                       "toObject":  197,
                       "toTerminal":  0,
                       "lengthMeters":  195.6,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  266,
-                      "uid":  "WIRE0266",
-                      "fromObject":  196,
-                      "fromTerminal":  7,
-                      "toObject":  198,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -7711,19 +6668,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  274,
-                      "uid":  "WIRE0274",
-                      "fromObject":  199,
-                      "fromTerminal":  7,
-                      "toObject":  201,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  275,
                       "uid":  "WIRE0275",
                       "fromObject":  200,
@@ -7809,19 +6753,6 @@
                       "toObject":  203,
                       "toTerminal":  0,
                       "lengthMeters":  200.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  282,
-                      "uid":  "WIRE0282",
-                      "fromObject":  202,
-                      "fromTerminal":  7,
-                      "toObject":  204,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -7919,19 +6850,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  290,
-                      "uid":  "WIRE0290",
-                      "fromObject":  217,
-                      "fromTerminal":  7,
-                      "toObject":  219,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  291,
                       "uid":  "WIRE0291",
                       "fromObject":  218,
@@ -8017,19 +6935,6 @@
                       "toObject":  221,
                       "toTerminal":  0,
                       "lengthMeters":  195.6,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  298,
-                      "uid":  "WIRE0298",
-                      "fromObject":  220,
-                      "fromTerminal":  7,
-                      "toObject":  222,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -8127,19 +7032,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  306,
-                      "uid":  "WIRE0306",
-                      "fromObject":  223,
-                      "fromTerminal":  7,
-                      "toObject":  225,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  307,
                       "uid":  "WIRE0307",
                       "fromObject":  224,
@@ -8225,19 +7117,6 @@
                       "toObject":  227,
                       "toTerminal":  0,
                       "lengthMeters":  200.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  314,
-                      "uid":  "WIRE0314",
-                      "fromObject":  226,
-                      "fromTerminal":  7,
-                      "toObject":  228,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -8335,19 +7214,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  322,
-                      "uid":  "WIRE0322",
-                      "fromObject":  241,
-                      "fromTerminal":  7,
-                      "toObject":  243,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  323,
                       "uid":  "WIRE0323",
                       "fromObject":  242,
@@ -8433,19 +7299,6 @@
                       "toObject":  245,
                       "toTerminal":  0,
                       "lengthMeters":  195.6,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  330,
-                      "uid":  "WIRE0330",
-                      "fromObject":  244,
-                      "fromTerminal":  7,
-                      "toObject":  246,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -8543,19 +7396,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  338,
-                      "uid":  "WIRE0338",
-                      "fromObject":  247,
-                      "fromTerminal":  7,
-                      "toObject":  249,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  339,
                       "uid":  "WIRE0339",
                       "fromObject":  248,
@@ -8641,19 +7481,6 @@
                       "toObject":  251,
                       "toTerminal":  0,
                       "lengthMeters":  200.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  346,
-                      "uid":  "WIRE0346",
-                      "fromObject":  250,
-                      "fromTerminal":  7,
-                      "toObject":  252,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -8751,19 +7578,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  354,
-                      "uid":  "WIRE0354",
-                      "fromObject":  265,
-                      "fromTerminal":  7,
-                      "toObject":  267,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  355,
                       "uid":  "WIRE0355",
                       "fromObject":  266,
@@ -8849,19 +7663,6 @@
                       "toObject":  269,
                       "toTerminal":  0,
                       "lengthMeters":  195.6,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  362,
-                      "uid":  "WIRE0362",
-                      "fromObject":  268,
-                      "fromTerminal":  7,
-                      "toObject":  270,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -8959,19 +7760,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  370,
-                      "uid":  "WIRE0370",
-                      "fromObject":  271,
-                      "fromTerminal":  7,
-                      "toObject":  273,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  371,
                       "uid":  "WIRE0371",
                       "fromObject":  272,
@@ -9057,19 +7845,6 @@
                       "toObject":  275,
                       "toTerminal":  0,
                       "lengthMeters":  200.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  378,
-                      "uid":  "WIRE0378",
-                      "fromObject":  274,
-                      "fromTerminal":  7,
-                      "toObject":  276,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -9167,19 +7942,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  386,
-                      "uid":  "WIRE0386",
-                      "fromObject":  289,
-                      "fromTerminal":  7,
-                      "toObject":  291,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  387,
                       "uid":  "WIRE0387",
                       "fromObject":  290,
@@ -9265,19 +8027,6 @@
                       "toObject":  293,
                       "toTerminal":  0,
                       "lengthMeters":  195.6,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  394,
-                      "uid":  "WIRE0394",
-                      "fromObject":  292,
-                      "fromTerminal":  7,
-                      "toObject":  294,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -9375,19 +8124,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  402,
-                      "uid":  "WIRE0402",
-                      "fromObject":  295,
-                      "fromTerminal":  7,
-                      "toObject":  297,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  403,
                       "uid":  "WIRE0403",
                       "fromObject":  296,
@@ -9473,19 +8209,6 @@
                       "toObject":  299,
                       "toTerminal":  0,
                       "lengthMeters":  200.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  410,
-                      "uid":  "WIRE0410",
-                      "fromObject":  298,
-                      "fromTerminal":  7,
-                      "toObject":  300,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -9583,19 +8306,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  418,
-                      "uid":  "WIRE0418",
-                      "fromObject":  313,
-                      "fromTerminal":  7,
-                      "toObject":  315,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  419,
                       "uid":  "WIRE0419",
                       "fromObject":  314,
@@ -9681,19 +8391,6 @@
                       "toObject":  317,
                       "toTerminal":  0,
                       "lengthMeters":  195.6,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  426,
-                      "uid":  "WIRE0426",
-                      "fromObject":  316,
-                      "fromTerminal":  7,
-                      "toObject":  318,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -9791,19 +8488,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  434,
-                      "uid":  "WIRE0434",
-                      "fromObject":  319,
-                      "fromTerminal":  7,
-                      "toObject":  321,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  435,
                       "uid":  "WIRE0435",
                       "fromObject":  320,
@@ -9889,19 +8573,6 @@
                       "toObject":  323,
                       "toTerminal":  0,
                       "lengthMeters":  200.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  442,
-                      "uid":  "WIRE0442",
-                      "fromObject":  322,
-                      "fromTerminal":  7,
-                      "toObject":  324,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -9999,19 +8670,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  450,
-                      "uid":  "WIRE0450",
-                      "fromObject":  337,
-                      "fromTerminal":  7,
-                      "toObject":  339,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  451,
                       "uid":  "WIRE0451",
                       "fromObject":  338,
@@ -10097,19 +8755,6 @@
                       "toObject":  341,
                       "toTerminal":  0,
                       "lengthMeters":  195.6,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  458,
-                      "uid":  "WIRE0458",
-                      "fromObject":  340,
-                      "fromTerminal":  7,
-                      "toObject":  342,
-                      "toTerminal":  0,
-                      "lengthMeters":  125.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
@@ -10207,19 +8852,6 @@
                       "temperature":  20
                   },
                   {
-                      "id":  466,
-                      "uid":  "WIRE0466",
-                      "fromObject":  343,
-                      "fromTerminal":  7,
-                      "toObject":  345,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
                       "id":  467,
                       "uid":  "WIRE0467",
                       "fromObject":  344,
@@ -10305,19 +8937,6 @@
                       "toObject":  347,
                       "toTerminal":  0,
                       "lengthMeters":  200.1,
-                      "shortCircuit":  false,
-                      "material":  0,
-                      "resistivity":  1.68E-08,
-                      "temperature":  20
-                  },
-                  {
-                      "id":  474,
-                      "uid":  "WIRE0474",
-                      "fromObject":  346,
-                      "fromTerminal":  7,
-                      "toObject":  348,
-                      "toTerminal":  0,
-                      "lengthMeters":  115.1,
                       "shortCircuit":  false,
                       "material":  0,
                       "resistivity":  1.68E-08,
