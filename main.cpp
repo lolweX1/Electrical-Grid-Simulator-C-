@@ -1,7 +1,5 @@
 #include <QApplication>
-#include <QPushButton>
 
-#include "Wires/Wire.hpp"
 #include "UI/MainSimulationWindow.hpp"
 
 int main(int argc, char *argv[]) {

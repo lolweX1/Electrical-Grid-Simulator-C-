@@ -1,10 +1,19 @@
-#include "ParentOfObjects.hpp"
 #include "PowerGenerator.hpp"
 
-#include <string>
+#include <algorithm>
 
-ParentOfObjects::ParentOfObjects(int x, int y)
-    : ParentOfObjects("icons\power_generator.png", 4, 4, x, y)
+PowerGenerator::PowerGenerator(int id, int gridX, int gridY)
+    : ParentOfObjects(id, "icons/power_generator.png", 4, 4, gridX, gridY,
+                      "Power generator", ObjectKind::PowerGenerator, 8.0)
 {
-    src_of_im = new QImage(QString::fromStdString(src));
+}
+
+void PowerGenerator::setOutputVoltage(double value)
+{
+    sourceVoltage = std::max(1.0, value);
+}
+
+void PowerGenerator::setCurrentLimit(double value)
+{
+    maximumCurrent = std::max(0.1, value);
 }

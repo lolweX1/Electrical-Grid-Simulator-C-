@@ -1,7 +1,8 @@
-build/Wires/Wire.o: Wires/Wire.cpp Wires/Wire.hpp \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h \
+build/Objects/Apartment.o: Objects/Apartment.cpp Objects/Apartment.hpp \
+ Objects/House.hpp Objects/ParentOfObjects.hpp \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QImage \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiglobal.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qconfig.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtcore-config.h \
@@ -20,16 +21,24 @@ build/Wires/Wire.o: Wires/Wire.cpp Wires/Wire.hpp \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobalstatic.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qnumeric.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtgui-config.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qrgb.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qnamespace.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qtmetamacros.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringlist.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydatapointer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydataops.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydata.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainertools_impl.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qhashfunctions.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringview.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearray.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qnamespace.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qtmetamacros.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydata.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydatapointer.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydataops.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainertools_impl.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayalgorithms.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayview.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringliteral.h \
@@ -37,17 +46,6 @@ build/Wires/Wire.o: Wires/Wire.cpp Wires/Wire.hpp \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qanystringview.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qutf8stringview.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringtokenizer.h \
- Wires/../Objects/ParentOfObjects.hpp \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/QImage \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiglobal.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qtgui-config.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qrgb.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringlist.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qhashfunctions.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterator.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearraylist.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qalgorithms.h \
@@ -72,11 +70,15 @@ build/Wires/Wire.o: Wires/Wire.cpp Wires/Wire.hpp \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qhash.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qmath.h
-Wires/Wire.hpp:
-/usr/include/x86_64-linux-gnu/qt6/QtCore/QString:
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h:
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h:
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qmath.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h
+Objects/Apartment.hpp:
+Objects/House.hpp:
+Objects/ParentOfObjects.hpp:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/QImage:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiglobal.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qconfig.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtcore-config.h:
@@ -95,16 +97,24 @@ Wires/Wire.hpp:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobalstatic.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qnumeric.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qtgui-config.h:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h:
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qrgb.h:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qnamespace.h:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qtmetamacros.h:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qstringlist.h:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydatapointer.h:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydataops.h:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydata.h:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainertools_impl.h:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qhashfunctions.h:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringview.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearray.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h:
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qnamespace.h:
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qtmetamacros.h:
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydata.h:
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h:
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydatapointer.h:
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydataops.h:
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainertools_impl.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayalgorithms.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayview.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringliteral.h:
@@ -112,17 +122,6 @@ Wires/Wire.hpp:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qanystringview.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qutf8stringview.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringtokenizer.h:
-Wires/../Objects/ParentOfObjects.hpp:
-/usr/include/x86_64-linux-gnu/qt6/QtGui/QImage:
-/usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h:
-/usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiglobal.h:
-/usr/include/x86_64-linux-gnu/qt6/QtGui/qtgui-config.h:
-/usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h:
-/usr/include/x86_64-linux-gnu/qt6/QtGui/qrgb.h:
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qstringlist.h:
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h:
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qhashfunctions.h:
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterator.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearraylist.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qalgorithms.h:
@@ -148,3 +147,5 @@ Wires/../Objects/ParentOfObjects.hpp:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qhash.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qmath.h:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QString:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h:

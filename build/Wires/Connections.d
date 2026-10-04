@@ -1,5 +1,5 @@
-build/Wires/Wire.o: Wires/Wire.cpp Wires/Wire.hpp \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+build/Wires/Connections.o: Wires/Connections.cpp Wires/Connections.hpp \
+ Wires/Wire.hpp /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h \
@@ -72,7 +72,12 @@ build/Wires/Wire.o: Wires/Wire.cpp Wires/Wire.hpp \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qhash.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qmath.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qmath.h \
+ Wires/../Objects/House.hpp Wires/../Objects/ParentOfObjects.hpp \
+ Wires/../Objects/GroundWireConnection.hpp \
+ Wires/../Objects/PowerGenerator.hpp Wires/../Objects/UtilityPole.hpp \
+ Wires/../Objects/WireSeparator.hpp
+Wires/Connections.hpp:
 Wires/Wire.hpp:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QString:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h:
@@ -148,3 +153,9 @@ Wires/../Objects/ParentOfObjects.hpp:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qhash.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qmath.h:
+Wires/../Objects/House.hpp:
+Wires/../Objects/ParentOfObjects.hpp:
+Wires/../Objects/GroundWireConnection.hpp:
+Wires/../Objects/PowerGenerator.hpp:
+Wires/../Objects/UtilityPole.hpp:
+Wires/../Objects/WireSeparator.hpp:

@@ -6,7 +6,15 @@ LDLIBS   := -lQt6Widgets -lQt6Gui -lQt6Core
 
 # ---- EDIT THESE ----
 SRC := main.cpp
+SRC += Objects/ParentOfObjects.cpp
+SRC += Objects/House.cpp
+SRC += Objects/Apartment.cpp
+SRC += Objects/UtilityPole.cpp
+SRC += Objects/GroundWireConnection.cpp
+SRC += Objects/WireSeparator.cpp
+SRC += Objects/PowerGenerator.cpp
 SRC += Wires/Wire.cpp
+SRC += Wires/Connections.cpp
 SRC += UI/MainSimulationWindow.cpp
 
 INCDIRS := .
